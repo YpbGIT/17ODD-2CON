@@ -1,9 +1,57 @@
-body {
-    display: flex;
-    justify-content: space-between;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
-#cube-container {
-    width: 50%;
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     height: 100vh;
-    position: relative;
+}
+
+#links-container {
+    background-color: #003366; /* Couleur de l'université */
+    padding: 20px;
+    color: white;
+}
+
+#links-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#links-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#links-container li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #004080;
+    transition: background-color 0.3s;
+}
+
+#links-container li a:hover {
+    background-color: #0055b3;
+}
+
+#cube-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: calc(100% - 40px); /* Ajuster la hauteur pour la barre de navigation */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
