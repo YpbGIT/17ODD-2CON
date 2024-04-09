@@ -4,32 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Cubes 3D</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="links-container">
-        <h1>Liste des Cubes 3D</h1>
-        <ul>
-            <li><a href="#" data-cube="ODD1">Cube 3D - ODD1</a></li>
-            <li><a href="#" data-cube="ODD2">Cube 3D - ODD2</a></li>
-            <li><a href="#" data-cube="ODD3">Cube 3D - ODD3</a></li>
-            <li><a href="#" data-cube="ODD4">Cube 3D - ODD4</a></li>
-            <li><a href="#" data-cube="ODD5">Cube 3D - ODD5</a></li>
-            <li><a href="#" data-cube="ODD6">Cube 3D - ODD6</a></li>
-            <li><a href="#" data-cube="ODD7">Cube 3D - ODD7</a></li>
-            <li><a href="#" data-cube="ODD8">Cube 3D - ODD8</a></li>
-            <li><a href="#" data-cube="ODD9">Cube 3D - ODD9</a></li>
-            <li><a href="#" data-cube="ODD10">Cube 3D - ODD10</a></li>
-            <li><a href="#" data-cube="ODD11">Cube 3D - ODD11</a></li>
-            <li><a href="#" data-cube="ODD12">Cube 3D - ODD12</a></li>
-            <li><a href="#" data-cube="ODD13">Cube 3D - ODD13</a></li>
-            <li><a href="#" data-cube="ODD14">Cube 3D - ODD14</a></li>
-            <li><a href="#" data-cube="ODD15">Cube 3D - ODD15</a></li>
-            <li><a href="#" data-cube="ODD16">Cube 3D - ODD16</a></li>
-            <li><a href="#" data-cube="ODD17">Cube 3D - ODD17</a></li>
-        </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Colonne de liens -->
+            <div class="col-md-4 p-3 bg-light">
+                <h1>Liste des Cubes 3D</h1>
+                <div class="list-group">
+                    <!-- Utiliser 'list-group-item' pour un style Bootstrap -->
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD1">Cube 3D - ODD1</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD2">Cube 3D - ODD2</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD3">Cube 3D - ODD3</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD4">Cube 3D - ODD4</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD5">Cube 3D - ODD5</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD6">Cube 3D - ODD6</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD7">Cube 3D - ODD7</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD8">Cube 3D - ODD8</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD9">Cube 3D - ODD9</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD10">Cube 3D - ODD10</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD11">Cube 3D - ODD11</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD12">Cube 3D - ODD12</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD13">Cube 3D - ODD13</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD14">Cube 3D - ODD14</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD15">Cube 3D - ODD15</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD16">Cube 3D - ODD16</a>
+                    <a href="#" class="list-group-item list-group-item-action" data-cube="ODD17">Cube 3D - ODD17</a>
+                </div>
+            </div>
+            <!-- Colonne du conteneur de cube -->
+            <div class="col-md-8 p-3">
+                <div id="cube-container" class="w-100 h-100 d-flex justify-content-center align-items-center">
+                    <!-- Le cube doit s'afficher ici -->
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="cube-container"></div>
     <script src="js/main.js"></script>
-</body>
-</html>
+    <!-- Optionnel: c'est pour inclure les scripts JavaScript Bootstrap en fonction des besoins-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body
