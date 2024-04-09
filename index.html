@@ -4,16 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Cubes 3D</title>
-    <style>
-        /* Style pour le conteneur du cube */
-        #cube-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 400px; /* Ajustez la hauteur selon vos besoins */
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <h1>Liste des Cubes 3D</h1>
@@ -36,33 +26,5 @@
         <li><a href="ODD16/index.html">Cube 3D - ODD16</a></li>
         <li><a href="ODD17/index.html">Cube 3D - ODD17</a></li>
     </ul>
-    
-    <!-- Balise div pour afficher le cube chargé -->
-    <div id="cube-container"></div>
-
-    <!-- Script JavaScript pour charger dynamiquement le contenu des cubes -->
-    <script>
-        // Récupérer la balise div pour afficher le cube
-        const cubeContainer = document.getElementById('cube-container');
-
-        // Écouter les clics sur les liens
-        document.querySelectorAll('ul a').forEach(link => {
-            link.addEventListener('click', function(event) {
-                // Empêcher le comportement par défaut de navigation
-                event.preventDefault();
-
-                // Récupérer l'URL de la cible du lien
-                const url = this.getAttribute('href');
-
-                // Charger le contenu HTML de la cible dans la balise div
-                fetch(url)
-                    .then(response => response.text())
-                    .then(html => {
-                        cubeContainer.innerHTML = html;
-                    })
-                    .catch(error => console.error('Error loading cube content:', error));
-            });
-        });
-    </script>
 </body>
 </html>
