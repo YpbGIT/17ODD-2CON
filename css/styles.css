@@ -1,0 +1,9 @@
+body {
+    display: flex;
+    justify-content: space-between;
+}
+#cube-container {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
