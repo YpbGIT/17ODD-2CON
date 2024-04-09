@@ -4,55 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Cubes 3D</title>
-    <!-- Link vers Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link vers Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        /* Style pour le conteneur du cube */
+        #cube-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px; /* Ajustez la hauteur selon vos besoins */
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Liste des Cubes 3D</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <ul>
-                    <li><a href="ODD1/index.html">Cube 3D - ODD1</a></li>
-                    <li><a href="ODD2/index.html">Cube 3D - ODD2</a></li>
-                    <!-- Ajoutez les autres liens ici -->
-                </ul>
-            </div>
-            <div class="col-md-6" id="cube-container">
-                <!-- Ici sera affiché le cube 3D -->
-            </div>
-        </div>
-    </div>
+    <h1>Liste des Cubes 3D</h1>
+    <ul>
+        <li><a href="ODD1/index.html">Cube 3D - ODD1</a></li>
+        <li><a href="ODD2/index.html">Cube 3D - ODD2</a></li>
+        <li><a href="ODD3/index.html">Cube 3D - ODD3</a></li>
+        <li><a href="ODD4/index.html">Cube 3D - ODD4</a></li>
+        <li><a href="ODD5/index.html">Cube 3D - ODD5</a></li>
+        <li><a href="ODD6/index.html">Cube 3D - ODD6</a></li>
+        <li><a href="ODD7/index.html">Cube 3D - ODD7</a></li>
+        <li><a href="ODD8/index.html">Cube 3D - ODD8</a></li>
+        <li><a href="ODD9/index.html">Cube 3D - ODD9</a></li>
+        <li><a href="ODD10/index.html">Cube 3D - ODD10</a></li>
+        <li><a href="ODD11/index.html">Cube 3D - ODD11</a></li>
+        <li><a href="ODD12/index.html">Cube 3D - ODD12</a></li>
+        <li><a href="ODD13/index.html">Cube 3D - ODD13</a></li>
+        <li><a href="ODD14/index.html">Cube 3D - ODD14</a></li>
+        <li><a href="ODD15/index.html">Cube 3D - ODD15</a></li>
+        <li><a href="ODD16/index.html">Cube 3D - ODD16</a></li>
+        <li><a href="ODD17/index.html">Cube 3D - ODD17</a></li>
+    </ul>
+    
+    <!-- Balise div pour afficher le cube chargé -->
+    <div id="cube-container"></div>
 
-    <!-- Scripts pour initialiser les cubes 3D -->
+    <!-- Script JavaScript pour charger dynamiquement le contenu des cubes -->
     <script>
-        // Placez votre code JavaScript Three.js ici pour créer et afficher les cubes 3D
-        // par exemple :
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth / 2, window.innerHeight);
-        document.getElementById('cube-container').appendChild(renderer.domElement);
+        // Récupérer la balise div pour afficher le cube
+        const cubeContainer = document.getElementById('cube-container');
 
-        var geometry = new THREE.BoxGeometry();
-        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        var cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+        // Écouter les clics sur les liens
+        document.querySelectorAll('ul a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Empêcher le comportement par défaut de navigation
+                event.preventDefault();
 
-        camera.position.z = 5;
+                // Récupérer l'URL de la cible du lien
+                const url = this.getAttribute('href');
 
-        var animate = function () {
-            requestAnimationFrame(animate);
-
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-
-            renderer.render(scene, camera);
-        };
-
-        animate();
+                // Charger le contenu HTML de la cible dans la balise div
+                fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        cubeContainer.innerHTML = html;
+                    })
+                    .catch(error => console.error('Error loading cube content:', error));
+            });
+        });
     </script>
 </body>
 </html>
