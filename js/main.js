@@ -29,7 +29,7 @@ function loadCubeIframe(cubeName) {
     const banner = document.createElement('img');
     banner.src = `img/Webbanderollesodd/b${cubeName.slice(3)}.jpg`; // Chemin vers la bannière spécifique
     banner.alt = `Bannière pour ${cubeName}`; // Texte alternatif pour la bannière
-    banner.style.width = '100%'; // Définissez la largeur de la bannière pour qu'elle prenne toute la largeur du conteneur
+    banner.style.width = '50%'; // Réduire la largeur de la bannière à 50%
     bannerContainer.appendChild(banner);
     cubeContainer.insertAdjacentElement('beforebegin', bannerContainer);
 
