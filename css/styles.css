@@ -10,19 +10,19 @@ body, html {
     display: grid;
     grid-template-columns: 1fr 3fr;
     height: 100vh;
-    margin: 0; /* Suppression de la marge pour couvrir toute la hauteur de l'écran */
-    overflow: hidden; /* Ajouté pour garder tout contenu débordant caché */
+    margin: 0; 
+    overflow: hidden; 
 }
 
 #menu-container {
-    background-color: #003366; /* Couleur de l'université */
-    padding: 10px; /* Réduction de la marge intérieure */
+    background-color: #003366; 
+    padding: 10px; 
     color: white;
-    border-radius: 10px; /* Bords arrondis */
-    height: 100vh; /* Couvre toute la hauteur de l'écran */
+    border-radius: 10px; 
+    height: 100vh; 
     display: flex;
-    flex-direction: column; /* Pour aligner les éléments en colonne */
-    justify-content: space-between; /* Pour répartir les éléments de manière égale sur l'axe vertical */
+    flex-direction: column; 
+    justify-content: space-between; 
 }
 
 #links-container h1 {
@@ -33,7 +33,7 @@ body, html {
 #links-container ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Suppression de la marge */
+    margin: 0; 
 }
 
 #links-container li a {
@@ -41,13 +41,13 @@ body, html {
     color: white;
     display: block;
     padding: 10px;
-    border-radius: 10px; /* Bords arrondis */
-    transition: background-color 0.3s, transform 0.2s ease; /* Ajouté transformation pour effet au survol */
+    border-radius: 10px; 
+    transition: background-color 0.3s, transform 0.2s ease; 
 }
 
 #links-container li a:hover {
     background-color: #0055b3;
-    transform: translateX(5px); /* Déplace légèrement l'élément vers la droite au survol */
+    transform: translateX(5px); 
 }
 
 #cube-container {
@@ -56,41 +56,37 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 20px; /* Ajouté pour un espacement intérieur */
-    margin: 20px; /* Ajouté pour un espacement extérieur */
-    border-radius: 10px; /* Bords arrondis */
-	margin-top: 120px; /* Ajustez la valeur selon le besoin
-    position: relative; /* Position relative pour les éléments enfants positionnés absolument */
-	
+    padding: 20px; 
+    margin: 20px; 
+    border-radius: 10px; 
+    margin-top: 120px; 
+    position: relative; 
+    height: calc(100vh - 240px); /* Hauteur totale moins la marge du haut et du bas */
 }
 
 iframe {
     border: none;
     width: 100%;
-    height: 100%; /* Modifié pour utiliser toute la hauteur disponible du conteneur */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ombre portée pour l'iframe */
-    position: absolute; /* Position absolue pour remplir le conteneur */
-    top: 0;
-    left: 0;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .banner-container {
-    position: absolute; /* Position absolue pour placer la bannière */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* Hauteur automatique pour adapter à la largeur */
-    z-index: -1; /* Pour placer la bannière en arrière-plan */
+    height: auto; 
+    z-index: -1; 
 }
 
-/* Styles pour les logos des ODD dans la grille */
 .cube-logo img {
     transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
-    margin: 0 auto; /* Centre l'image dans la colonne */
-    max-width: 100%; /* Taille maximale de l'image */
-    margin-bottom: 10px; /* Espacement entre les icônes */
-    border-radius: 10px; /* Bords arrondis */
+    margin: 0 auto;
+    max-width: 100%; 
+    margin-bottom: 10px; 
+    border-radius: 10px; 
 }
 
 .cube-logo:hover img {

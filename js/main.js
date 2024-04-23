@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function loadCubeIframe(cubeName) {
     const cubeContainer = document.getElementById('cube-container');
-    
+
     // Supprime l'iframe précédent s'il existe
     const oldIframe = cubeContainer.querySelector('iframe');
     if (oldIframe) {
@@ -29,7 +29,7 @@ function loadCubeIframe(cubeName) {
     const banner = document.createElement('img');
     banner.src = `img/Webbanderollesodd/b${cubeName.slice(3)}.jpg`; // Chemin vers la bannière spécifique
     banner.alt = `Bannière pour ${cubeName}`; // Texte alternatif pour la bannière
-    banner.style.width = '50%'; // Réduire la largeur de la bannière à 50%
+    banner.style.width = '100%'; // Ajustement pour utiliser toute la largeur
     bannerContainer.appendChild(banner);
     cubeContainer.appendChild(bannerContainer);
 
@@ -37,8 +37,7 @@ function loadCubeIframe(cubeName) {
     const iframe = document.createElement('iframe');
     iframe.src = `${cubeName}/index.html`; // Chemin vers l'index.html du cube spécifique
     iframe.style.width = '100%';
-    iframe.style.height = '500px'; // Définissez la hauteur selon vos besoins
-    iframe.frameBorder = '0'; // Pour supprimer la bordure de l'iframe
-
+    iframe.style.height = '100%'; // Utiliser toute la hauteur disponible
+    iframe.frameBorder = '0';
     cubeContainer.appendChild(iframe);
 }
