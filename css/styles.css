@@ -5,36 +5,31 @@ body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    overflow: hidden; /* Empêche le débordement de la page */
-    box-sizing: border-box; /* S'assure que padding et border sont inclus dans la hauteur/largeur */
+    overflow: hidden; /* Aucun défilement */
 }
 
 * {
-    box-sizing: inherit;
+    box-sizing: border-box; /* La largeur et la hauteur incluent le padding et la bordure */
 }
 
 #main-container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 250px 1fr; /* Colonne de menu fixe à 250px et le reste pour le contenu */
     height: 100vh;
-    width: 100vw; /* S'assure que le conteneur principal ne dépasse pas la largeur de la vue */
-    overflow: hidden;
+    overflow: hidden; /* Aucun défilement */
 }
 
 #menu-container {
     background-color: #003366;
-    padding: 5px; /* Ajustez le padding pour réduire l'espace utilisé */
+    padding: 10px;
     color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden; /* Ajoute un overflow hidden pour éviter tout débordement */
+    height: 100%;
+    overflow-y: auto; /* Permet un défilement vertical si nécessaire */
 }
 
 #links-container h1 {
-    font-size: 1.5em; /* Réduit la taille de la police */
-    margin-bottom: 10px; /* Réduit la marge pour économiser de l'espace */
+    font-size: 1.5rem; /* Taille de police réduite */
+    margin-bottom: 10px;
 }
 
 #links-container ul {
@@ -47,7 +42,8 @@ body, html {
     text-decoration: none;
     color: white;
     display: block;
-    padding: 5px; /* Réduit le padding */
+    padding: 5px;
+    margin: 5px 0; /* Marges verticales réduites */
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s ease;
 }
@@ -63,37 +59,32 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 10px; /* Réduit le padding */
-    margin: 10px; /* Réduit la marge */
-    border-radius: 5px;
-    margin-top: 60px; /* Ajusté pour moins d'espace au-dessus */
-    position: relative;
-    height: calc(100vh - 80px); /* Réduit la hauteur totale pour éviter le défilement */
+    height: calc(100vh - 50px); /* Ajustement de la hauteur */
+    margin-top: 10px; /* Espace réduit au-dessus du conteneur */
 }
 
 iframe {
     border: none;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Prend toute la hauteur disponible */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .banner-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 70%; /* Taille de la bannière ajustée */
-    height: auto;
-    z-index: 10;
+    width: 100%; /* Bannière prenant toute la largeur disponible */
+    height: 50px; /* Hauteur fixe pour la bannière */
+    display: flex;
+    justify-content: center; /* Centre les éléments de la bannière horizontalement */
+    align-items: center; /* Centre les éléments de la bannière verticalement */
+    margin-bottom: 10px; /* Espacement après la bannière */
 }
 
 .cube-logo img {
     transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
-    margin: 0 auto;
-    max-width: 100%;
-    margin-bottom: 5px; /* Réduit l'espace entre les logos */
-    border-radius: 5px;
+    width: 100%; /* Les images de logo prennent toute la largeur du conteneur */
+    max-width: 80px; /* Largeur maximale pour les images de logo */
+    margin: 5px auto; /* Espacement vertical réduit et centrage horizontal */
 }
 
 .cube-logo:hover img {
