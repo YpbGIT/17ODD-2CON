@@ -18,8 +18,9 @@ body, html {
 
 #links-container {
     background-color: #003366; /* Couleur de l'université */
-    padding: 20px;
+    padding: 10px; /* Réduction de la marge intérieure */
     color: white;
+    border-radius: 10px; /* Bords arrondis */
 }
 
 #links-container h1 {
@@ -69,7 +70,8 @@ iframe {
     transition: transform 0.3s, filter 0.3s;
     cursor: pointer;
     margin: 0 auto; /* Centre l'image dans la colonne */
-    width: 100%; /* Assurez-vous que les images ne dépassent pas de leur colonne */
+    width: 50px; /* Nouvelle taille des icônes */
+    margin-bottom: 10px; /* Espacement entre les icônes */
 }
 
 .cube-logo:hover img {
