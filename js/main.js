@@ -10,34 +10,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function loadCubeIframe(cubeName) {
     const cubeContainer = document.getElementById('cube-container');
+    const bannerSpace = document.getElementById('banner-space');
 
-    // Supprime l'iframe précédent s'il existe
-    const oldIframe = cubeContainer.querySelector('iframe');
-    if (oldIframe) {
-        oldIframe.remove();
-    }
-
-    // Supprime la bannière précédente s'il existe
-    const oldBanner = document.querySelector('.banner-container');
-    if (oldBanner) {
-        oldBanner.remove();
-    }
+    // Nettoyer l'ancien contenu des bannières et du cube
+    bannerSpace.innerHTML = '';
+    cubeContainer.innerHTML = '';
 
     // Crée une nouvelle bannière pour le cube spécifique
-    const bannerContainer = document.createElement('div');
-    bannerContainer.classList.add('banner-container');
     const banner = document.createElement('img');
-    banner.src = `img/Webbanderollesodd/b${cubeName.slice(3)}.jpg`; // Chemin vers la bannière spécifique
-    banner.alt = `Bannière pour ${cubeName}`; // Texte alternatif pour la bannière
-    banner.style.width = '100%'; // Ajustement pour utiliser toute la largeur
-    bannerContainer.appendChild(banner);
-    cubeContainer.appendChild(bannerContainer);
+    banner.src = `img/Webbanderollesodd/b${cubeName.slice(3)}.jpg`;
+    banner.alt = `Bannière pour ${cubeName}`;
+    banner.classList.add('img-fluid');
+    banner.style.width = '100%';  // Utilisation de toute la largeur disponible
+    bannerSpace.appendChild(banner);
 
     // Crée un nouvel iframe pour le cube spécifique
     const iframe = document.createElement('iframe');
-    iframe.src = `${cubeName}/index.html`; // Chemin vers l'index.html du cube spécifique
+    iframe.src = `${cubeName}/index.html`;
     iframe.style.width = '100%';
-    iframe.style.height = '100%'; // Utiliser toute la hauteur disponible
+    iframe.style.height = '100%'; // Utilisation de toute la hauteur disponible
     iframe.frameBorder = '0';
     cubeContainer.appendChild(iframe);
 }
