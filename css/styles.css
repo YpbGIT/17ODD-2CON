@@ -59,7 +59,9 @@ body, html {
     padding: 20px; /* Ajouté pour un espacement intérieur */
     margin: 20px; /* Ajouté pour un espacement extérieur */
     border-radius: 10px; /* Bords arrondis */
+	margin-top: 20px; /* Ajustez la valeur selon le besoin
     position: relative; /* Position relative pour les éléments enfants positionnés absolument */
+	
 }
 
 iframe {
