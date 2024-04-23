@@ -12,23 +12,23 @@ function loadCubeIframe(cubeName) {
     const cubeContainer = document.getElementById('cube-container');
     const bannerSpace = document.getElementById('banner-space');
 
-    // Nettoyer l'ancien contenu des bannières et du cube
+    // Clear previous content
     bannerSpace.innerHTML = '';
     cubeContainer.innerHTML = '';
 
-    // Crée une nouvelle bannière pour le cube spécifique
+    // Create a new banner for the specific cube
     const banner = document.createElement('img');
     banner.src = `img/Webbanderollesodd/b${cubeName.slice(3)}.jpg`;
-    banner.alt = `Bannière pour ${cubeName}`;
+    banner.alt = `Banner for ${cubeName}`;
     banner.classList.add('img-fluid');
-    banner.style.width = '100%';  // Utilisation de toute la largeur disponible
+    banner.style.width = '70%'; // Adjust width as needed
     bannerSpace.appendChild(banner);
 
-    // Crée un nouvel iframe pour le cube spécifique
+    // Create a new iframe for the specific cube
     const iframe = document.createElement('iframe');
     iframe.src = `${cubeName}/index.html`;
     iframe.style.width = '100%';
-    iframe.style.height = '100%'; // Utilisation de toute la hauteur disponible
+    iframe.style.height = '100%'; // Use all available height
     iframe.frameBorder = '0';
     cubeContainer.appendChild(iframe);
 }
