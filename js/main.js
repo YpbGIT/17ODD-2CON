@@ -31,7 +31,7 @@ function loadCubeIframe(cubeName) {
     banner.alt = `Bannière pour ${cubeName}`; // Texte alternatif pour la bannière
     banner.style.width = '50%'; // Réduire la largeur de la bannière à 50%
     bannerContainer.appendChild(banner);
-    cubeContainer.insertAdjacentElement('beforebegin', bannerContainer);
+    cubeContainer.appendChild(bannerContainer);
 
     // Crée un nouvel iframe pour le cube spécifique
     const iframe = document.createElement('iframe');
