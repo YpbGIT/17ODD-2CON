@@ -73,8 +73,8 @@ iframe {
 
 .banner-container {
     position: absolute;
-    top: 0; /* Adjusted for better alignment */
-    left: 0;
+    top: 50px; /* Adjusted for better alignment */
+    left: 10px;
     width: 70%; /* Adjusted width for better fit */
     margin: 0 auto; /* Centering the banner */
     height: auto;
