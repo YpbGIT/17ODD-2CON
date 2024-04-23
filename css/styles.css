@@ -14,12 +14,12 @@ body, html {
     overflow: hidden; /* Ajouté pour garder tout contenu débordant caché */
 }
 
-#links-container {
+#menu-container {
     background-color: #003366; /* Couleur de l'université */
     padding: 10px; /* Réduction de la marge intérieure */
     color: white;
     border-radius: 10px; /* Bords arrondis */
-    height: 100%; /* Couvre toute la hauteur du conteneur parent */
+    height: 100vh; /* Couvre toute la hauteur de l'écran */
     display: flex;
     flex-direction: column; /* Pour aligner les éléments en colonne */
     justify-content: space-between; /* Pour répartir les éléments de manière égale sur l'axe vertical */
