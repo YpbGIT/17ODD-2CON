@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function loadCubeIframe(cubeName) {
     const cubeContainer = document.getElementById('cube-container');
+    
     // Supprime l'iframe précédent s'il existe
     const oldIframe = cubeContainer.querySelector('iframe');
     if (oldIframe) {
@@ -17,7 +18,7 @@ function loadCubeIframe(cubeName) {
     }
 
     // Supprime la bannière précédente s'il existe
-    const oldBanner = cubeContainer.querySelector('.banner-container');
+    const oldBanner = document.querySelector('.banner-container');
     if (oldBanner) {
         oldBanner.remove();
     }
