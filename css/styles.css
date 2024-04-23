@@ -75,7 +75,7 @@ iframe {
     margin: 0 auto; /* Centre l'image dans la colonne */
     max-width: 100%; /* Taille maximale de l'image */
     margin-bottom: 10px; /* Espacement entre les icônes */
-    border-radius: 50%; /* Bords arrondis */
+    border-radius: 10px; /* Bords arrondis */
 }
 
 .cube-logo:hover img {
