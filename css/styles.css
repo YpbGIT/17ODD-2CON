@@ -1,34 +1,40 @@
 body, html {
     height: 100%;
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     overflow: hidden; /* Empêche le débordement de la page */
+    box-sizing: border-box; /* S'assure que padding et border sont inclus dans la hauteur/largeur */
+}
+
+* {
+    box-sizing: inherit;
 }
 
 #main-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    height: 100vh; /* Hauteur fixée à 100% de la hauteur de la fenêtre du navigateur */
-    margin: 0;
-    overflow: hidden; /* Empêche le débordement des contenus internes */
+    height: 100vh;
+    width: 100vw; /* S'assure que le conteneur principal ne dépasse pas la largeur de la vue */
+    overflow: hidden;
 }
 
 #menu-container {
     background-color: #003366;
-    padding: 10px;
+    padding: 5px; /* Ajustez le padding pour réduire l'espace utilisé */
     color: white;
     border-radius: 10px;
-    height: 100%; /* Adapte la hauteur au conteneur parent */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden; /* Ajoute un overflow hidden pour éviter tout débordement */
 }
 
 #links-container h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 1.5em; /* Réduit la taille de la police */
+    margin-bottom: 10px; /* Réduit la marge pour économiser de l'espace */
 }
 
 #links-container ul {
@@ -41,8 +47,8 @@ body, html {
     text-decoration: none;
     color: white;
     display: block;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px; /* Réduit le padding */
+    border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s ease;
 }
 
@@ -57,10 +63,12 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    height: calc(100vh - 40px); /* Calcule la hauteur pour s'adapter à la fenêtre */
+    padding: 10px; /* Réduit le padding */
+    margin: 10px; /* Réduit la marge */
+    border-radius: 5px;
+    margin-top: 60px; /* Ajusté pour moins d'espace au-dessus */
+    position: relative;
+    height: calc(100vh - 80px); /* Réduit la hauteur totale pour éviter le défilement */
 }
 
 iframe {
@@ -74,8 +82,8 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 50px; /* Hauteur fixée pour les bannières */
+    width: 70%; /* Taille de la bannière ajustée */
+    height: auto;
     z-index: 10;
 }
 
@@ -84,8 +92,8 @@ iframe {
     cursor: pointer;
     margin: 0 auto;
     max-width: 100%;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    margin-bottom: 5px; /* Réduit l'espace entre les logos */
+    border-radius: 5px;
 }
 
 .cube-logo:hover img {
