@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[data-cube]').forEach(link => {
-        link.addEventListener('click', function(e) {
+    document.querySelectorAll('.cube-logo').forEach(cube => {
+        cube.addEventListener('click', function(e) {
             e.preventDefault();
             const cubeName = this.getAttribute('data-cube');
             loadCubeIframe(cubeName);
