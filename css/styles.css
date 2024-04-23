@@ -84,7 +84,7 @@ iframe {
     cursor: pointer;
     width: 100%; /* Les images de logo prennent toute la largeur du conteneur */
     max-width: 80px; /* Largeur maximale pour les images de logo */
-    margin: 5px auto; /* Espacement vertical réduit et centrage horizontal */
+    margin: 1px auto; /* Espacement vertical réduit et centrage horizontal */
 }
 
 .cube-logo:hover img {
