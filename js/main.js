@@ -21,7 +21,7 @@ function loadCubeIframe(cubeName) {
     banner.src = `img/Webbanderollesodd/b${cubeName.slice(3)}.jpg`;
     banner.alt = `Banner for ${cubeName}`;
     banner.classList.add('img-fluid');
-    banner.style.width = '60%'; // Adjust width as needed
+    banner.style.width = '100%'; // Ensure the banner fills the width
     bannerSpace.appendChild(banner);
 
     // Create a new iframe for the specific cube
