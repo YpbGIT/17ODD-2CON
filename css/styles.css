@@ -10,10 +10,8 @@ body, html {
     display: grid;
     grid-template-columns: 1fr 3fr;
     height: 100vh;
-    margin: 20px; /* Ajouté pour créer un peu d'espace autour du conteneur principal */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ajouté pour une ombre portée douce */
+    margin: 0; /* Suppression de la marge pour couvrir toute la hauteur de l'écran */
     overflow: hidden; /* Ajouté pour garder tout contenu débordant caché */
-    border-radius: 10px; /* Bords arrondis */
 }
 
 #links-container {
@@ -21,6 +19,10 @@ body, html {
     padding: 10px; /* Réduction de la marge intérieure */
     color: white;
     border-radius: 10px; /* Bords arrondis */
+    height: 100%; /* Couvre toute la hauteur du conteneur parent */
+    display: flex;
+    flex-direction: column; /* Pour aligner les éléments en colonne */
+    justify-content: space-between; /* Pour répartir les éléments de manière égale sur l'axe vertical */
 }
 
 #links-container h1 {
@@ -31,6 +33,7 @@ body, html {
 #links-container ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Suppression de la marge */
 }
 
 #links-container li a {
@@ -38,7 +41,7 @@ body, html {
     color: white;
     display: block;
     padding: 10px;
-    border-bottom: 1px solid #004080;
+    border-radius: 10px; /* Bords arrondis */
     transition: background-color 0.3s, transform 0.2s ease; /* Ajouté transformation pour effet au survol */
 }
 
@@ -72,6 +75,7 @@ iframe {
     margin: 0 auto; /* Centre l'image dans la colonne */
     width: 50px; /* Nouvelle taille des icônes */
     margin-bottom: 10px; /* Espacement entre les icônes */
+    border-radius: 50%; /* Bords arrondis */
 }
 
 .cube-logo:hover img {
